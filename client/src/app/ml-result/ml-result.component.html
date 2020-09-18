@@ -1,0 +1,22 @@
+<app-home></app-home>
+
+<div class="img-container">
+    <img class="ss" src="../../assets/logos/mlResult.PNG">
+</div>
+
+<div class="content" role="main">
+<input type="hidden" #selection>
+<div class="card-container">
+<div class="card card-small" (click)="selection.value = 'result'" tabindex="0">
+  <img src = "../../assets//logos/play_arrow-24px.svg" width="24" height="24" />
+
+    <span>Run Python File</span>
+  </div>
+
+  <div class="terminal" [ngSwitch]="selection.value">
+    <pre *ngSwitchDefault>Python Terminal</pre>
+    <pre *ngSwitchCase="'result'"><app-result></app-result></pre>
+</div>
+
+
+</div>

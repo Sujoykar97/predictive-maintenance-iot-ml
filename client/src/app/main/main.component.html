@@ -1,0 +1,43 @@
+<!-- Table responsive wrapper -->
+  <div class="table-responsive mx-3">
+    <!--Table 1-->
+    <table class="table table-hover mb-0">
+
+      <!--Table head-->
+      <thead>
+        <tr>
+          
+          <th class="th-lg"><a>Name<i class="fa fa-sort ml-1"></i></a></th>
+          <th class="th-lg"><a>Email<i class="fa fa-sort ml-1"></i></a></th>
+          <th class="th-lg"><a>Pass<i class="fa fa-sort ml-1"></i></a></th>
+          
+        </tr>
+      </thead>
+      <!--Table head-->
+
+  
+      <li *ngFor="let detail of userDetails['name']">
+        {{detail}}
+      </li>
+      <li *ngFor="let detail of userDetails['email']">
+        {{detail}}
+      </li>
+      <li *ngFor="let detail of userDetails['pass']">
+        {{detail}}
+      </li>
+
+      <!--Table body 1-->
+      <!-- <tbody>
+        <tr *ngFor="let detail of userDetails">
+          
+          <td>{{detail.name}}</td>
+          <td>{{detail.email}}</td>
+          <td>{{detail.pass}}</td>
+        </tr>
+        
+      </tbody> -->
+      <!--Table body-->
+    </table>
+    <!--Table-->
+  </div>
+  <!-- Table responsive wrapper -->

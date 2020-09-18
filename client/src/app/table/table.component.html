@@ -1,0 +1,151 @@
+<div class="container-fluid">
+<!--Accordion wrapper-->
+<div class="accordion md-accordion accordion-blocks" id="accordionEx78" role="tablist"
+  aria-multiselectable="true">
+
+  <!-- Accordion card 1 -->
+  <div class="card">
+
+    <!-- Card header 1 -->
+    <div class="card-header" role="tab" id="headingUnfiled">
+
+      
+
+      <!-- Heading 1-->
+      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapseUnfiled" aria-expanded="true"
+        aria-controls="collapseUnfiled">
+        <h5 class="mt-1 mb-0">
+          <span>Test Data</span>
+          <i class="fa fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+
+    </div>
+
+    <!-- Card body 1-->
+    <div id="collapseUnfiled" class="collapse" role="tabpanel" aria-labelledby="headingUnfiled"
+      data-parent="#accordionEx78">
+      <div class="card-body">
+
+        <!--Top Table UI-->
+        
+        <!--Top Table UI-->
+
+        <!-- Table responsive wrapper -->
+        <div class="table-responsive mx-3">
+          <!--Table 1-->
+          <table class="table table-hover mb-0">
+
+            <!--Table head-->
+            <thead>
+              <tr>
+                
+                <th class="th-lg"><a>S.No<i class="fa fa-sort ml-1"></i></a></th>
+                <th class="th-lg"><a>Current<i class="fa fa-sort ml-1"></i></a></th>
+                <th class="th-lg"><a>Power<i class="fa fa-sort ml-1"></i></a></th>
+                
+              </tr>
+            </thead>
+            <!--Table head-->
+
+           
+
+
+            <!--Table body 1-->
+            
+            <tbody *ngIf="testData['current']">
+              <ng-container *ngFor="let data of testData['current'];let i=index">
+              <tr >
+                
+                <!-- <td>{{index+1}}</td> -->
+                <td>{{i+1}}</td>
+                <!-- <td class="status">{{event.Status}}</td> -->
+                <td>{{data}}</td>
+                <td>{{testData['power'][i]}}</td>
+              </tr>
+
+            </ng-container>
+            </tbody>
+            <!--Table body-->
+          </table>
+          <!--Table-->
+        </div>
+        <!-- Table responsive wrapper -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card 2-->
+  <div class="card">
+
+    <!-- Card header 2-->
+    <div class="card-header" role="tab" id="heading79">
+
+     
+
+      <!-- Heading -->
+      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse79" aria-expanded="true"
+        aria-controls="collapse79">
+        <h5 class="mt-1 mb-0">
+          <span>Train Data</span>
+          <i class="fa fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+
+    </div>
+
+    <!-- Card body 2-->
+    <div id="collapse79" class="collapse show" role="tabpanel" aria-labelledby="heading79"
+      data-parent="#accordionEx78">
+      <div class="card-body">
+
+        <!--Top Table UI-->
+        
+        <!--Top Table UI-->
+
+        <!-- Table responsive wrapper -->
+        <div class="table-responsive mx-3">
+          <!--Table-->
+          <table class="table table-hover mb-0">
+
+            <!--Table head 2-->
+            <thead>
+              <tr>
+                
+                <th class="th-lg"><a>S.No<i class="fa fa-sort ml-1"></i></a></th>
+                <th class="th-lg"><a>Current<i class="fa fa-sort ml-1"></i></a></th>
+                <th class="th-lg"><a>Power<i class="fa fa-sort ml-1"></i></a></th>
+              </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body 2-->
+            <tbody>
+              <tr *ngFor="let data of trainData;let i = index">
+                
+                <td>{{i+1}}</td>
+                <td>{{data.Current}}</td>
+                <td>{{data.Power}}</td>
+                
+              </tr>
+              
+              
+            </tbody>
+            <!--Table body-->
+          </table>
+          <!--Table-->
+        </div>
+        <!-- Table responsive wrapper -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion card -->
+
+ 
+</div>
+<!--/.Accordion wrapper-->
+
+    </div>
